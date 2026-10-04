@@ -15,7 +15,7 @@ export class RevealDirective implements OnDestroy {
         if (!entry?.isIntersecting) return;
         this.element.nativeElement.classList.add('is-visible');
         this.observer?.disconnect();
-      }, { threshold: 0.14, rootMargin: '0px 0px -48px' });
+      }, { threshold: 0.04, rootMargin: '0px 0px -24px' });
       this.observer.observe(this.element.nativeElement);
     });
   }

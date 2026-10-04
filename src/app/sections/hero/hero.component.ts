@@ -3,14 +3,16 @@ import { RouterLink } from '@angular/router';
 import { TranslocoPipe } from '@jsverse/transloco';
 import { profile } from '../../data/portfolio.data';
 import { SocialLinksComponent } from '../../shared/social-links/social-links.component';
+import { TiltDirective } from '../../core/directives/tilt.directive';
 
 @Component({
   selector: 'mk-hero',
   standalone: true,
-  imports: [RouterLink, TranslocoPipe, SocialLinksComponent],
+  imports: [RouterLink, TranslocoPipe, SocialLinksComponent, TiltDirective],
   template: `
     <section id="home" class="hero" aria-labelledby="hero-title">
       <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__halo" aria-hidden="true"></div>
       <div class="shell hero__inner">
         <div class="hero__content">
           <div class="availability"><span></span>{{ 'hero.availability' | transloco }}</div>
@@ -28,10 +30,11 @@ import { SocialLinksComponent } from '../../shared/social-links/social-links.com
           <mk-social-links />
         </div>
 
-        <div class="system-preview" [attr.aria-label]="'hero.visualLabel' | transloco">
+        <div class="system-preview" mkTilt [attr.aria-label]="'hero.visualLabel' | transloco">
           <div class="system-preview__label"><span class="status-dot"></span>{{ 'hero.visualLabel' | transloco }}<span class="system-preview__code" aria-hidden="true">MK / 01</span></div>
           <div class="system-scene" aria-hidden="true">
             <div class="system-scene__orbit"></div>
+            <div class="system-scene__orbit system-scene__orbit--outer"></div>
             <div class="system-scene__cross system-scene__cross--one">+</div>
             <div class="system-scene__cross system-scene__cross--two">+</div>
             <div class="system-plane system-plane--domain" [class.selected]="activeLayer() === 'domain'"><span class="plane-glyph">&#123; &#125;</span><span>DOMAIN</span><i></i></div>
