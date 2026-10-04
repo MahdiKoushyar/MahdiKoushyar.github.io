@@ -99,6 +99,11 @@
     "delivery": { "title": "Reliable delivery", "description": "Quality gates, observable CI/CD, and release paths designed for confident iteration." }
   },
   "contact": {
+    "businessCard": {
+      "alt": "Black and gold business card for Mahdi Koushyar, web designer and developer. Phone: 09124993798. Email: mahdi.koushyar@gmail.com. QR code for mahdikoushyar.github.io.",
+      "caption": "My business card. A connection, at a glance.",
+      "open": "View full-size card"
+    },
     "eyebrow": "Contact",
     "title": "Let’s build something meaningful.",
     "lead": "A new product, a difficult architecture decision, or an idea worth exploring.",

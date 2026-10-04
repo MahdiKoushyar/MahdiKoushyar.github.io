@@ -13,7 +13,7 @@ export class ThemeService {
     effect(() => {
       const theme = this.theme();
       this.document.documentElement.setAttribute('data-theme', theme);
-      this.document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#0b0c0f' : '#f4f3ef');
+      this.document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#10100f' : '#faf7f0');
       if (this.isBrowser) localStorage.setItem('mk-theme', theme);
     });
   }

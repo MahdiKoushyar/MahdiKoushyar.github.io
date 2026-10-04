@@ -1,20 +1,19 @@
 :root {
   color-scheme: dark;
-  --bg: #0c0d12;
-  --bg-soft: #111219;
-  --surface: #15161f;
-  --surface-solid: #15161f;
-  --surface-elevated: #1e2030;
-  --text: #f0eff7;
-  --text-soft: #a8abba;
-  --text-faint: #9397aa;
-  --border: #272936;
-  --border-strong: #404457;
-  --accent: #bca7ff;
-  --accent-ink: #211344;
-  --violet: #bca7ff;
+  --bg: #10100f;
+  --bg-soft: #171613;
+  --surface: #1e1c18;
+  --surface-solid: #1e1c18;
+  --surface-elevated: #29251e;
+  --text: #f6f0e5;
+  --text-soft: #b9b0a0;
+  --text-faint: #a89d89;
+  --border: #343026;
+  --border-strong: #635745;
+  --accent: #d5b47a;
+  --accent-ink: #211b11;
   --error: #ff9999;
-  --header: rgb(12 13 18 / 88%);
+  --header: rgb(16 16 15 / 88%);
   --shadow: 0 24px 70px rgb(0 0 0 / 16%);
   --radius-md: 20px;
   --radius-lg: 28px;
@@ -25,22 +24,21 @@
 }
 :root[data-theme='light'] {
   color-scheme: light;
-  --bg: #faf9f6;
-  --bg-soft: #f2f0f7;
-  --surface: #fff;
-  --surface-solid: #fff;
-  --surface-elevated: #efecf8;
-  --text: #21212c;
-  --text-soft: #5f6071;
-  --text-faint: #69697b;
-  --border: #e1dfeb;
-  --border-strong: #c1bed1;
-  --accent: #6846c6;
+  --bg: #faf7f0;
+  --bg-soft: #f1ebe0;
+  --surface: #fffcf7;
+  --surface-solid: #fffcf7;
+  --surface-elevated: #eee4d3;
+  --text: #29261f;
+  --text-soft: #655d50;
+  --text-faint: #716553;
+  --border: #e0d7c6;
+  --border-strong: #b5a489;
+  --accent: #805b25;
   --accent-ink: #fff;
-  --violet: #6846c6;
   --error: #b42318;
-  --header: rgb(250 249 246 / 90%);
-  --shadow: 0 24px 70px rgb(67 48 111 / 7%);
+  --header: rgb(250 247 240 / 90%);
+  --shadow: 0 24px 70px rgb(76 57 24 / 9%);
 }
 
 * { box-sizing: border-box; }
@@ -251,6 +249,10 @@ html[lang='fa'] .availability { font-size: 12px; }
 .form-status { margin: 18px 0 0; color: var(--text-soft); font-size: 13px; }
 
 /* Shared page shell. */
+.business-card { margin: 0 0 56px; overflow: hidden; border: 1px solid var(--border-strong); border-radius: var(--radius-md); background: var(--surface); }
+.business-card img { width: 100%; height: auto; }
+.business-card figcaption { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding: 16px 24px; color: var(--text-soft); font-size: 13px; }
+.business-card figcaption a { display: inline-flex; align-items: center; min-height: 44px; color: var(--accent); }
 .site-footer { background: var(--bg-soft); border-top: 1px solid var(--border); padding-block: 50px 24px; }
 .site-footer__grid { display: grid; grid-template-columns: 1fr .5fr .5fr; gap: 32px; }
 .footer-mark { display: inline-flex; width: 72px; height: 48px; color: var(--accent); }
