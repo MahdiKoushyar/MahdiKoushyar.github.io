@@ -33,6 +33,7 @@
     "scroll": "A little more about me"
   },
   "about": {
+    "cardLabel": "Flip my business card to view the other side",
     "eyebrow": "Engineering profile",
     "title": "Good software starts with clear thinking.",
     "lead": "At the intersection of engineering discipline and thoughtful product design.",

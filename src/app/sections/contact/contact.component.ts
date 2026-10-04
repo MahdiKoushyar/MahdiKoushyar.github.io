@@ -14,10 +14,6 @@ import { SocialLinksComponent } from '../../shared/social-links/social-links.com
     <section id="contact" class="section section--contact">
       <div class="shell" mkReveal>
         <mk-section-heading index="06" eyebrowKey="contact.eyebrow" titleKey="contact.title" descriptionKey="contact.lead" />
-        <figure class="business-card">
-          <img src="business-card.png" [alt]="'contact.businessCard.alt' | transloco" width="1942" height="809" loading="lazy" decoding="async">
-          <figcaption><span>{{ 'contact.businessCard.caption' | transloco }}</span><a href="business-card.png" target="_blank" rel="noopener noreferrer">{{ 'contact.businessCard.open' | transloco }} <span aria-hidden="true">↗</span></a></figcaption>
-        </figure>
         <div class="contact-grid">
           <div class="contact-aside">
             <p class="contact-aside__statement">{{ 'contact.statement' | transloco }}</p>
