@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "primary": "Primary navigation",
+    "menu": "Explore",
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "controls": {
+    "language": "Switch language to Persian",
+    "theme": "Toggle light and dark theme",
+    "menu": "Open or close navigation menu",
+    "backToTop": "Back to top"
+  },
+  "hero": {
+    "availability": "Thoughtful engineering. Lasting impact.",
+    "firstName": "Mahdi",
+    "lastName": "Koushyar",
+    "visualLabel": "Anatomy of a digital product",
+    "exploreLayers": "Explore architecture layers",
+    "stackLabel": "My core toolkit",
+    "layers": { "interface": "Interface", "state": "State", "domain": "Domain" },
+    "layerDetails": { "interface": "Thoughtful interactions. Accessible by design.", "state": "Predictable data flow. Responsive experiences.", "domain": "Clear boundaries. Room to grow." },
+    "kicker": "Software Engineer · Frontend Architect",
+    "roles": "Complex systems. Clear experiences.",
+    "statement": "I bring structure to ambitious digital products—with scalable Angular architecture and an eye for the details that matter.",
+    "viewProjects": "View selected work",
+    "resume": "Download resume",
+    "contact": "Start a conversation",
+    "scroll": "A little more about me"
+  },
+  "about": {
+    "eyebrow": "Engineering profile",
+    "title": "Good software starts with clear thinking.",
+    "lead": "At the intersection of engineering discipline and thoughtful product design.",
+    "principles": {
+      "clarity": { "title": "Clarity first", "text": "Explicit boundaries. Code the next person can understand." },
+      "craft": { "title": "Care in the details", "text": "Accessible interfaces, considered interactions, and fast feedback." },
+      "scale": { "title": "Built to evolve", "text": "Foundations that grow with the product and the team." }
+    },
+    "paragraphOne": "My work sits between engineering systems and product experience: shaping Angular foundations, reusable interfaces, delivery patterns, and performance budgets that teams can trust.",
+    "paragraphTwo": "I favor explicit boundaries, measurable outcomes, and maintainable solutions over fashionable complexity. Every component should earn its place in the system.",
+    "quote": "Clarity scales better than cleverness.",
+    "metrics": {
+      "years": "Years of experience",
+      "projects": "Products delivered",
+      "systems": "Systems shaped",
+      "technologies": "Core technologies"
+    }
+  },
+  "experience": {
+    "eyebrow": "Career timeline",
+    "title": "The journey behind the work.",
+    "lead": "Roles, responsibilities, and the decisions that shaped my approach.",
+    "emptyTitle": "Career details are being prepared.",
+    "emptyText": "A closer look at my professional journey will be available here."
+  },
+  "skills": {
+    "eyebrow": "Capability map",
+    "title": "The right tools. A considered approach.",
+    "lead": "From the first interaction to the underlying architecture.",
+    "frontend": "Frontend engineering",
+    "architecture": "Architecture & systems",
+    "backend": "API collaboration",
+    "performance": "Performance & delivery",
+    "tools": "Tooling & quality",
+    "aiApplication": "Applying AI"
+  },
+  "projects": {
+    "eyebrow": "Selected work",
+    "title": "The thinking behind the build.",
+    "lead": "A closer look at challenges, decisions, and the systems that connect them.",
+    "filterLabel": "Filter projects by category",
+    "categories": {
+      "all": "All",
+      "enterprise": "Enterprise",
+      "architecture": "Architecture",
+      "angular": "Angular",
+      "saas": "SaaS",
+      "open-source": "Open source",
+      "personal": "Personal"
+    },
+    "caseStudy": "Read case study",
+    "emptyEyebrow": "Case studies · Coming soon",
+    "emptyTitle": "Every interface has a story.",
+    "emptyText": "Selected project stories are being prepared—from the first constraint to the final engineering decision."
+  },
+  "highlights": {
+    "eyebrow": "Architecture highlights",
+    "title": "Connected by design.",
+    "lead": "Four perspectives. One coherent product.",
+    "core": "Product engineering",
+    "systems": { "title": "Scalable frontend systems", "description": "Clear domain boundaries, predictable state, and composable standalone features." },
+    "platforms": { "title": "Shared platform foundations", "description": "Reusable UI libraries, design tokens, and conventions that reduce product drift." },
+    "performance": { "title": "Performance by design", "description": "SSR, route-level loading, lean bundles, and interaction budgets considered from the start." },
+    "delivery": { "title": "Reliable delivery", "description": "Quality gates, observable CI/CD, and release paths designed for confident iteration." }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let’s build something meaningful.",
+    "lead": "A new product, a difficult architecture decision, or an idea worth exploring.",
+    "statement": "Let’s turn technical complexity into a product experience that feels simple.",
+    "response": "The contact channel is being set up. Message delivery is not available yet.",
+    "fields": { "name": "Name", "email": "Email", "subject": "Subject", "message": "Message" },
+    "errors": { "summary": "Please review the highlighted fields.", "required": "This field is required.", "email": "Enter a valid email address.", "message": "Please add at least 20 characters of context." },
+    "privacy": "Preview only. Messages are not sent yet.",
+    "send": "Send message",
+    "notConfigured": "Contact delivery is not configured yet. Your message has not been sent."
+  },
+  "footer": {
+    "line": "Software engineering with structure, restraint, and intent.",
+    "built": "Designed and built with Angular"
+  },
+  "notFound": {
+    "eyebrow": "Lost route",
+    "title": "This page is outside the architecture.",
+    "text": "The route may have changed, or the page may not exist yet.",
+    "action": "Return home"
+  },
+  "caseStudy": {
+    "back": "Back to selected work",
+    "emptyEyebrow": "Case study unavailable",
+    "emptyTitle": "This project has not been published.",
+    "emptyText": "The route and content architecture are ready, but no invented case study will be shown.",
+    "problem": "Problem",
+    "challenge": "Challenge",
+    "role": "My role",
+    "architecture": "Architecture",
+    "solution": "Solution",
+    "decisions": "Engineering decisions",
+    "performance": "Performance improvements",
+    "results": "Results",
+    "lessons": "Lessons learned",
+    "placeholder": {
+      "problem": "Document the verified product problem and user impact.",
+      "role": "Describe the verified scope of responsibility and collaboration model.",
+      "architecture": "Explain system boundaries, data flow, and the rationale behind the architecture.",
+      "solution": "Connect the implementation to the original constraints.",
+      "decisions": "Record meaningful trade-offs and rejected alternatives.",
+      "performance": "Add measured before-and-after performance evidence.",
+      "lessons": "Capture what changed in your engineering approach."
+    }
+  }
+}

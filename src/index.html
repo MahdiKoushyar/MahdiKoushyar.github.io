@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <title>Mahdi Koushyar — Software Engineer & Frontend Architect</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio of Mahdi Koushyar, a software engineer focused on scalable frontend architecture and Angular systems.">
+    <meta name="theme-color" content="#0b0c0f">
+    <link rel="canonical" href="https://mahdikoushyar.github.io/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=mk-3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Mahdi Koushyar — Software Engineer & Frontend Architect">
+    <meta property="og:description" content="Scalable frontend architectures and high-performance digital experiences.">
+    <meta property="og:url" content="https://mahdikoushyar.github.io/">
+    <meta property="og:image" content="https://mahdikoushyar.github.io/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mahdi Koushyar — Software Engineer & Frontend Architect">
+    <meta name="twitter:description" content="Scalable frontend architectures and high-performance digital experiences.">
+    <meta name="twitter:image" content="https://mahdikoushyar.github.io/og-image.svg">
+    <script>
+      (() => {
+        try {
+          const theme = localStorage.getItem('mk-theme') || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+          const language = localStorage.getItem('mk-language') || (navigator.language.startsWith('fa') ? 'fa' : 'en');
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.lang = language;
+          document.documentElement.dir = language === 'fa' ? 'rtl' : 'ltr';
+        } catch (_) {}
+      })();
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://mahdikoushyar.github.io/#person",
+            "name": "Mahdi Koushyar",
+            "url": "https://mahdikoushyar.github.io/",
+            "jobTitle": "Software Engineer and Frontend Architect",
+            "knowsAbout": ["Angular", "TypeScript", "Frontend Architecture", "Web Performance"]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://mahdikoushyar.github.io/#website",
+            "url": "https://mahdikoushyar.github.io/",
+            "name": "Mahdi Koushyar — Portfolio",
+            "inLanguage": ["en", "fa"]
+          },
+          {
+            "@type": "ProfilePage",
+            "mainEntity": { "@id": "https://mahdikoushyar.github.io/#person" },
+            "isPartOf": { "@id": "https://mahdikoushyar.github.io/#website" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <mk-root></mk-root>
+    <noscript>This portfolio requires JavaScript for language and theme controls.</noscript>
+  </body>
+</html>
