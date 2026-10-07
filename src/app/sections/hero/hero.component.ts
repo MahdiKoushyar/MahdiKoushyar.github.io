@@ -3,16 +3,13 @@ import { RouterLink } from '@angular/router';
 import { TranslocoPipe } from '@jsverse/transloco';
 import { profile } from '../../data/portfolio.data';
 import { SocialLinksComponent } from '../../shared/social-links/social-links.component';
-import { TiltDirective } from '../../core/directives/tilt.directive';
 
 @Component({
   selector: 'mk-hero',
   standalone: true,
-  imports: [RouterLink, TranslocoPipe, SocialLinksComponent, TiltDirective],
+  imports: [RouterLink, TranslocoPipe, SocialLinksComponent],
   template: `
     <section id="home" class="hero" aria-labelledby="hero-title">
-      <div class="hero__grid" aria-hidden="true"></div>
-      <div class="hero__halo" aria-hidden="true"></div>
       <div class="shell hero__inner">
         <div class="hero__content">
           <div class="availability"><span></span>{{ 'hero.availability' | transloco }}</div>
@@ -33,18 +30,9 @@ import { TiltDirective } from '../../core/directives/tilt.directive';
           </div>
         </div>
 
-        <div class="system-preview" mkTilt [attr.aria-label]="'hero.visualLabel' | transloco">
+        <div class="system-preview" [attr.aria-label]="'hero.visualLabel' | transloco">
           <div class="system-preview__label"><span class="status-dot"></span>{{ 'hero.visualLabel' | transloco }}<span class="system-preview__code" aria-hidden="true">MK / 01</span></div>
-          <div class="system-scene" aria-hidden="true">
-            <div class="system-scene__orbit"></div>
-            <div class="system-scene__orbit system-scene__orbit--outer"></div>
-            <div class="system-scene__cross system-scene__cross--one">+</div>
-            <div class="system-scene__cross system-scene__cross--two">+</div>
-            <div class="system-plane system-plane--domain" [class.selected]="activeLayer() === 'domain'"><span class="plane-glyph">&#123; &#125;</span><span>DOMAIN</span><i></i></div>
-            <div class="system-plane system-plane--state" [class.selected]="activeLayer() === 'state'"><span class="plane-glyph">↔</span><span>STATE</span><i></i></div>
-            <div class="system-plane system-plane--interface" [class.selected]="activeLayer() === 'interface'"><span class="plane-window"><i></i><i></i><i></i><b></b></span><span>INTERFACE</span><i></i></div>
-            <div class="system-scene__caption"><span></span>DESIGNED TO CONNECT</div>
-          </div>
+          <div class="folio-register" aria-hidden="true"><span>MK</span><span class="folio-register__number">0{{ layers.indexOf(activeLayer()) + 1 }}</span></div>
           <div class="system-layers" role="group" [attr.aria-label]="'hero.exploreLayers' | transloco">
             @for (layer of layers; track layer; let index = $index) {
               <button type="button" [class.active]="activeLayer() === layer" [attr.aria-pressed]="activeLayer() === layer" (click)="activeLayer.set(layer)"><span>0{{ index + 1 }}</span>{{ 'hero.layers.' + layer | transloco }}</button>

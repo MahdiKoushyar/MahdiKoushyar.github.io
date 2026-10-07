@@ -1,5 +1,11 @@
 # Portfolio refinement
 
+## Current authority: MK Fieldnotes
+
+The original-UI directive supersedes the historical refinement notes below. Use `docs/original-ui-dna.md` and `src/styles/_editorial.scss`: open editorial composition, sharp rules, no glass or gradient hero, no repeated card layout, no fade-up content. Preserve the compact flipping business card. Historical notes below describe the previous release, not the current implementation.
+
+## Historical refinement
+
 This page overrides the generated MASTER.md for the requested portfolio redesign.
 
 - Direction: restrained software-engineering portfolio, clear typography, generous but controlled spacing.

@@ -84,10 +84,15 @@ export class HeaderComponent implements OnDestroy {
   private observeSections(): void {
       this.observer?.disconnect();
       const sections = navigation.map((id) => this.document.getElementById(id)).filter((element): element is HTMLElement => Boolean(element));
-      this.observer = new IntersectionObserver((entries) => {
-        const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible?.target.id) this.activeSection.set(visible.target.id);
-      }, { rootMargin: '-30% 0px -60%', threshold: [0, 0.2, 0.5] });
+      this.observer = new IntersectionObserver(() => {
+        // Entries contain only changed intersections, not every visible chapter.
+        const readingLine = this.document.documentElement.clientHeight * 0.4;
+        const current = sections.find((section) => {
+          const bounds = section.getBoundingClientRect();
+          return bounds.top <= readingLine && bounds.bottom > readingLine;
+        });
+        if (current) this.activeSection.set(current.id);
+      }, { rootMargin: '-40% 0px -59%', threshold: 0 });
       sections.forEach((section) => this.observer?.observe(section));
   }
 
