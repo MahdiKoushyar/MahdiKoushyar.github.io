@@ -2,10 +2,11 @@ import { describe, expect, it } from 'vitest';
 import { experiences, profile, projectCategories, projects, skillGroups } from './portfolio.data';
 
 describe('portfolio content integrity', () => {
-  it('publishes the supplied social profiles and omits the unconfigured email link', () => {
+  it('publishes the supplied profiles and business-card email', () => {
     expect(profile.socialLinks.filter((link) => link.url)).toEqual([
       { id: 'github', url: 'https://github.com/MahdiKoushyar', label: 'GitHub' },
       { id: 'linkedin', url: 'https://www.linkedin.com/in/mahdi-koushyar-b55984116/', label: 'LinkedIn' },
+      { id: 'email', url: `mailto:${profile.email}`, label: 'Email' },
     ]);
   });
 

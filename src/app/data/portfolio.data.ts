@@ -43,14 +43,14 @@ export interface SkillGroup {
 
 export const profile = {
   name: 'Mahdi Koushyar',
-  email: '',
+  email: 'mahdi.koushyar@gmail.com',
   location: '',
   resumeUrl: '',
   canonicalUrl: 'https://mahdikoushyar.github.io/',
   socialLinks: [
     { id: 'github', url: 'https://github.com/MahdiKoushyar', label: 'GitHub' },
     { id: 'linkedin', url: 'https://www.linkedin.com/in/mahdi-koushyar-b55984116/', label: 'LinkedIn' },
-    { id: 'email', url: '', label: 'Email' },
+    { id: 'email', url: 'mailto:mahdi.koushyar@gmail.com', label: 'Email' },
   ] satisfies readonly SocialLink[],
 } as const;
 

@@ -16,6 +16,8 @@
     "backToTop": "Back to top"
   },
   "hero": {
+    "exploreSkills": "Explore my capabilities",
+    "focusLabel": "Areas of focus",
     "availability": "Thoughtful engineering. Lasting impact.",
     "firstName": "Mahdi",
     "lastName": "Koushyar",
@@ -26,13 +28,14 @@
     "layerDetails": { "interface": "Thoughtful interactions. Accessible by design.", "state": "Predictable data flow. Responsive experiences.", "domain": "Clear boundaries. Room to grow." },
     "kicker": "Software Engineer · Frontend Architect",
     "roles": "Complex systems. Clear experiences.",
-    "statement": "I bring structure to ambitious digital products—with scalable Angular architecture and an eye for the details that matter.",
+    "statement": "I’m Mahdi Koushyar. I work on web interfaces, Angular architecture, and clear user experiences for complex digital products.",
     "viewProjects": "View selected work",
     "resume": "Download resume",
     "contact": "Start a conversation",
     "scroll": "A little more about me"
   },
   "about": {
+    "cardHint": "My card. Hover or tap to turn it over.",
     "cardLabel": "Flip my business card to view the other side",
     "eyebrow": "Engineering profile",
     "title": "Good software starts with clear thinking.",
@@ -53,6 +56,7 @@
     }
   },
   "experience": {
+    "linkedin": "Explore my professional profile on LinkedIn",
     "eyebrow": "Career timeline",
     "title": "The journey behind the work.",
     "lead": "Roles, responsibilities, and the decisions that shaped my approach.",
@@ -60,9 +64,16 @@
     "emptyText": "A closer look at my professional journey will be available here."
   },
   "skills": {
+    "descriptions": {
+      "01": "Web interfaces for products and businesses, using Angular, React and WordPress.",
+      "02": "Clear foundations for projects that grow with the product and the team.",
+      "03": "Connecting the interface to data and backend services.",
+      "04": "Attention to loading speed, bundle size and the experience across devices.",
+      "05": "Testing, continuous delivery and thoughtful use of AI in the development process."
+    },
     "eyebrow": "Capability map",
-    "title": "The right tools. A considered approach.",
-    "lead": "From the first interaction to the underlying architecture.",
+    "title": "From an idea to a usable experience.",
+    "lead": "A tool for each need. These are the areas I focus on.",
     "frontend": "Frontend engineering",
     "architecture": "Architecture & systems",
     "backend": "API collaboration",
@@ -71,6 +82,7 @@
     "aiApplication": "Applying AI"
   },
   "projects": {
+    "github": "Explore my profile and repositories on GitHub",
     "eyebrow": "Selected work",
     "title": "The thinking behind the build.",
     "lead": "A closer look at challenges, decisions, and the systems that connect them.",
@@ -100,6 +112,10 @@
     "delivery": { "title": "Reliable delivery", "description": "Quality gates, observable CI/CD, and release paths designed for confident iteration." }
   },
   "contact": {
+    "emailTitle": "Tell me about your idea",
+    "emailText": "Open your email app and start a conversation",
+    "linkedinText": "Connect professionally and get to know my work",
+    "previewLabel": "Contact form preview — sending unavailable",
     "businessCard": {
       "alt": "Black and gold business card for Mahdi Koushyar, web designer and developer. Phone: 09124993798. Email: mahdi.koushyar@gmail.com. QR code for mahdikoushyar.github.io.",
       "caption": "My business card. A connection, at a glance.",
@@ -109,7 +125,7 @@
     "title": "Let’s build something meaningful.",
     "lead": "A new product, a difficult architecture decision, or an idea worth exploring.",
     "statement": "Let’s turn technical complexity into a product experience that feels simple.",
-    "response": "The contact channel is being set up. Message delivery is not available yet.",
+    "response": "To get started, include the topic, your goal and an approximate timeline in your email.",
     "fields": { "name": "Name", "email": "Email", "subject": "Subject", "message": "Message" },
     "errors": { "summary": "Please review the highlighted fields.", "required": "This field is required.", "email": "Enter a valid email address.", "message": "Please add at least 20 characters of context." },
     "privacy": "Preview only. Messages are not sent yet.",

@@ -26,6 +26,7 @@ import { SectionHeadingComponent } from '../../shared/section-heading/section-he
                 <span class="mini-card__face mini-card__back"></span>
               </span>
             </button>
+            <p class="card-hint">{{ 'about.cardHint' | transloco }} <span aria-hidden="true">↻</span></p>
             <span class="sr-only">{{ 'contact.businessCard.alt' | transloco }}</span>
           </div>
           @if (metrics.length) {

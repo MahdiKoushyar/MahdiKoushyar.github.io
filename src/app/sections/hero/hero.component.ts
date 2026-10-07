@@ -21,13 +21,16 @@ import { TiltDirective } from '../../core/directives/tilt.directive';
           <p class="hero__roles">{{ 'hero.roles' | transloco }}</p>
           <p class="hero__statement">{{ 'hero.statement' | transloco }}</p>
           <div class="hero__actions">
-            <a routerLink="/" fragment="projects" class="button button--primary">{{ 'hero.viewProjects' | transloco }} <span aria-hidden="true">↘</span></a>
+            <a routerLink="/" fragment="contact" class="button button--primary">{{ 'hero.contact' | transloco }} <span class="direction-arrow" aria-hidden="true">↗</span></a>
             @if (profile.resumeUrl) {
               <a [href]="profile.resumeUrl" class="button button--secondary" download>{{ 'hero.resume' | transloco }}</a>
             }
-            <a routerLink="/" fragment="contact" class="button button--text">{{ 'hero.contact' | transloco }}</a>
+            <a routerLink="/" fragment="skills" class="button button--secondary">{{ 'hero.exploreSkills' | transloco }}</a>
           </div>
           <mk-social-links />
+          <div class="hero-focus" [attr.aria-label]="'hero.focusLabel' | transloco">
+            <span>Angular / React</span><span>WordPress</span><span>{{ 'skills.aiApplication' | transloco }}</span>
+          </div>
         </div>
 
         <div class="system-preview" mkTilt [attr.aria-label]="'hero.visualLabel' | transloco">

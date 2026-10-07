@@ -17,12 +17,22 @@ import { SocialLinksComponent } from '../../shared/social-links/social-links.com
         <div class="contact-grid">
           <div class="contact-aside">
             <p class="contact-aside__statement">{{ 'contact.statement' | transloco }}</p>
-            @if (profile.email) { <a class="contact-email" [href]="'mailto:' + profile.email">{{ profile.email }}</a> }
+            <a class="contact-email" dir="ltr" [href]="'mailto:' + profile.email">{{ profile.email }}</a>
             @if (profile.location) { <p>{{ profile.location }}</p> }
             <mk-social-links />
             <div class="contact-note"><span aria-hidden="true"></span><p>{{ 'contact.response' | transloco }}</p></div>
           </div>
 
+          <div class="contact-options">
+            <a class="contact-option contact-option--primary" [href]="'mailto:' + profile.email">
+              <span class="contact-option__icon" aria-hidden="true">@</span><span><strong>{{ 'contact.emailTitle' | transloco }}</strong><small>{{ 'contact.emailText' | transloco }}</small></span><span class="direction-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="contact-option" href="https://www.linkedin.com/in/mahdi-koushyar-b55984116/" target="_blank" rel="noopener noreferrer">
+              <span class="contact-option__icon" aria-hidden="true">in</span><span><strong>LinkedIn</strong><small>{{ 'contact.linkedinText' | transloco }}</small></span><span class="direction-arrow" aria-hidden="true">↗</span>
+            </a>
+            <details class="contact-preview">
+              <summary>{{ 'contact.previewLabel' | transloco }} <span aria-hidden="true">+</span></summary>
+              <p class="contact-preview__notice">{{ 'contact.privacy' | transloco }}</p>
           <form class="contact-form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
             @if (showSummary()) {
               <div class="form-summary" role="alert" tabindex="-1" id="form-error-summary">
@@ -46,6 +56,8 @@ import { SocialLinksComponent } from '../../shared/social-links/social-links.com
             <div class="contact-form__bottom"><p>{{ 'contact.privacy' | transloco }}</p><button class="button button--primary" type="submit">{{ 'contact.send' | transloco }} <span aria-hidden="true">↗</span></button></div>
             @if (status()) { <p class="form-status" role="status">{{ status() | transloco }}</p> }
           </form>
+            </details>
+          </div>
         </div>
       </div>
     </section>

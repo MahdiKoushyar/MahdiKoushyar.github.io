@@ -16,3 +16,5 @@ This page overrides the generated MASTER.md for the requested portfolio redesign
 - Implementation: page refinements live in src/styles/_refinement.scss; pointer motion is isolated in TiltDirective with listener and animation-frame cleanup.
 - Accessibility: visible focus, 44px controls, mobile-menu Escape and focus cycling, current-section semantics.
 - Existing MK identity remains in place; this refinement changes presentation, not identity assets.
+- Skill-guided refinement (2026-10-07): prioritize contact and capabilities in the hero; explain skills in plain bilingual copy; use direct email/LinkedIn contact cards; keep the inactive form in a labeled disclosure. Compact empty states link to real professional profiles.
+- Motion tokens: 120/200/320/420ms; max 120ms reveal stagger; main name/statement render immediately. Prefer calm surfaces, fewer repeated card borders and smaller mobile display type. Detailed validation: docs/design-review-2026-10-07.md.

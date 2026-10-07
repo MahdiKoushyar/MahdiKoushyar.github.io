@@ -16,6 +16,7 @@ import { SectionHeadingComponent } from '../../shared/section-heading/section-he
           @for (group of groups; track group.titleKey; let index = $index) {
             <article class="skill-group">
               <div class="skill-group__heading"><span>{{ group.index }}</span><svg class="skill-group__icon" viewBox="0 0 32 32" aria-hidden="true"><path [attr.d]="icons[index]" /></svg><h3>{{ group.titleKey | transloco }}</h3></div>
+              <p class="skill-group__description">{{ 'skills.descriptions.' + group.index | transloco }}</p>
               <div class="tag-list tag-list--large">
                 @for (skill of group.skills; track skill) { <span dir="ltr">{{ skill }}</span> }
                 @for (skillKey of group.translatedSkills; track skillKey) { <span>{{ skillKey | transloco }}</span> }

@@ -29,7 +29,7 @@ import { SectionHeadingComponent } from '../../shared/section-heading/section-he
         } @else {
           <div class="content-placeholder">
             <span class="content-placeholder__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 6V4h8v2M3 10l9 5 9-5M3 6h18v14H3zM10 13h4"/></svg></span>
-            <div><h3>{{ 'experience.emptyTitle' | transloco }}</h3><p>{{ 'experience.emptyText' | transloco }}</p></div>
+            <div><h3>{{ 'experience.emptyTitle' | transloco }}</h3><p>{{ 'experience.emptyText' | transloco }}</p><a class="text-link" href="https://www.linkedin.com/in/mahdi-koushyar-b55984116/" target="_blank" rel="noopener noreferrer">{{ 'experience.linkedin' | transloco }} <span aria-hidden="true">↗</span></a></div>
           </div>
         }
       </div>

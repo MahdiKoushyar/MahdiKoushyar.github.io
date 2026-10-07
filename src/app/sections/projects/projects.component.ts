@@ -40,7 +40,7 @@ import { SectionHeadingComponent } from '../../shared/section-heading/section-he
         } @else {
           <div class="project-empty">
             <div class="project-empty__visual" aria-hidden="true"><div class="case-file case-file--back"></div><div class="case-file"><span>MK / WORK</span><div class="case-file__diagram"><i></i><b></b><i></i></div><strong>Behind the<br>interface.</strong><span>ENGINEERING NOTES <b>↗</b></span></div></div>
-            <div><p class="eyebrow">{{ 'projects.emptyEyebrow' | transloco }}</p><h3>{{ 'projects.emptyTitle' | transloco }}</h3><p>{{ 'projects.emptyText' | transloco }}</p><a class="button button--secondary" routerLink="/" fragment="contact">{{ 'hero.contact' | transloco }} <span aria-hidden="true">↗</span></a></div>
+            <div><p class="eyebrow">{{ 'projects.emptyEyebrow' | transloco }}</p><h3>{{ 'projects.emptyTitle' | transloco }}</h3><p>{{ 'projects.emptyText' | transloco }}</p><a class="button button--secondary" href="https://github.com/MahdiKoushyar" target="_blank" rel="noopener noreferrer">{{ 'projects.github' | transloco }} <span aria-hidden="true">↗</span></a></div>
           </div>
         }
       </div>
