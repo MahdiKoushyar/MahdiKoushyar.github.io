@@ -1,0 +1,376 @@
+// Targeted recovery of the richer black/gold identity after the fieldnotes direction.
+// This layer intentionally extends refinement instead of replacing the visual system.
+@mixin layout {
+  :root {
+    --gold-halo: color-mix(in srgb, var(--accent) 18%, transparent);
+    --gold-line: color-mix(in srgb, var(--accent) 48%, var(--border));
+    --deep-shadow: 0 34px 90px rgb(0 0 0 / 24%);
+  }
+
+  :root[data-theme='light'] {
+    --gold-halo: color-mix(in srgb, var(--accent) 12%, transparent);
+    --deep-shadow: 0 30px 78px rgb(89 62 24 / 15%);
+  }
+
+  .site-header {
+    border-color: color-mix(in srgb, var(--accent) 18%, var(--border));
+    background: color-mix(in srgb, var(--header) 92%, transparent);
+    box-shadow: 0 14px 50px rgb(0 0 0 / 9%), inset 0 1px color-mix(in srgb, var(--accent) 11%, transparent);
+  }
+
+  .hero {
+    background:
+      radial-gradient(circle at 82% 34%, var(--gold-halo), transparent 31%),
+      radial-gradient(ellipse at 20% 82%, color-mix(in srgb, var(--accent) 5%, transparent), transparent 48%);
+  }
+
+  .hero__grid {
+    opacity: .16;
+    mask-image: linear-gradient(90deg, transparent 4%, #000 38%, #000 92%, transparent);
+  }
+
+  .hero__halo {
+    border-color: color-mix(in srgb, var(--accent) 23%, transparent);
+    box-shadow: 0 0 90px color-mix(in srgb, var(--accent) 7%, transparent);
+  }
+
+  .hero__halo::before { border-color: color-mix(in srgb, var(--accent) 17%, transparent); }
+  .hero__halo::after { border-color: color-mix(in srgb, var(--accent) 11%, transparent); }
+
+  .hero h1 > span:last-child {
+    background-image: linear-gradient(112deg, color-mix(in srgb, var(--accent) 72%, var(--text)), var(--accent) 48%, color-mix(in srgb, var(--accent) 48%, var(--text)) 72%, var(--accent));
+    background-size: 180% 100%;
+    filter: drop-shadow(0 12px 28px color-mix(in srgb, var(--accent) 8%, transparent));
+  }
+
+  .system-preview {
+    isolation: isolate;
+    border-color: var(--gold-line);
+    background:
+      linear-gradient(145deg, color-mix(in srgb, var(--accent) 13%, var(--surface)) 0%, var(--surface) 36%, var(--bg) 100%);
+    box-shadow: var(--deep-shadow), inset 0 1px color-mix(in srgb, var(--accent) 28%, transparent);
+  }
+
+  .system-preview::before {
+    content: '';
+    position: absolute;
+    z-index: 4;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    background: linear-gradient(118deg, color-mix(in srgb, var(--accent) 16%, transparent), transparent 21% 75%, color-mix(in srgb, var(--accent) 8%, transparent));
+    mix-blend-mode: screen;
+  }
+
+  .system-preview__label { border-color: color-mix(in srgb, var(--accent) 17%, var(--border)); }
+  .system-scene { background: radial-gradient(circle at 50% 46%, color-mix(in srgb, var(--accent) 21%, transparent), transparent 58%); }
+  .system-scene__orbit { border-color: color-mix(in srgb, var(--accent) 50%, var(--border)); }
+  .system-scene__orbit--outer { border-style: dashed; }
+
+  .system-plane {
+    border-color: color-mix(in srgb, var(--accent) 38%, var(--border-strong));
+    background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 8%, var(--surface-solid)), var(--surface-solid));
+    box-shadow: 14px 22px 38px rgb(0 0 0 / 20%), inset 0 1px color-mix(in srgb, var(--accent) 15%, transparent);
+  }
+
+  .system-plane.selected {
+    border-color: var(--accent);
+    background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 19%, var(--surface-solid)), var(--surface-solid));
+    box-shadow: 20px 34px 52px color-mix(in srgb, var(--accent) 18%, transparent), inset 0 1px color-mix(in srgb, var(--accent) 32%, transparent);
+  }
+
+  .system-layers button { position: relative; }
+  .system-layers button.active::after {
+    content: '';
+    position: absolute;
+    inset: auto 22% 4px;
+    block-size: 1px;
+    background: var(--accent);
+  }
+
+  .section-heading { position: relative; }
+  .section-heading::after {
+    content: '';
+    position: absolute;
+    inset-block-start: 18px;
+    inset-inline-end: 0;
+    inline-size: clamp(46px, 8vw, 112px);
+    block-size: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-line));
+  }
+
+  html[dir='rtl'] .section-heading::after { background: linear-gradient(270deg, transparent, var(--gold-line)); }
+
+  .section-heading__index {
+    background: color-mix(in srgb, var(--accent) 7%, var(--surface));
+    box-shadow: inset 0 0 0 4px color-mix(in srgb, var(--accent) 3%, transparent);
+  }
+
+  .section--skills {
+    background:
+      radial-gradient(circle at 15% 15%, color-mix(in srgb, var(--accent) 6%, transparent), transparent 28%),
+      var(--bg-soft);
+  }
+
+  .skills-matrix { gap: 20px; }
+
+  .skill-group {
+    min-height: 238px;
+    border-color: color-mix(in srgb, var(--accent) 14%, var(--border));
+    background:
+      linear-gradient(150deg, color-mix(in srgb, var(--accent) 7%, var(--surface)), var(--surface) 44%);
+    box-shadow: inset 0 1px color-mix(in srgb, var(--accent) 10%, transparent);
+    transition: transform var(--motion-slow) var(--ease), border-color var(--motion-normal), box-shadow var(--motion-slow) var(--ease);
+  }
+
+  .skill-group::after {
+    content: '';
+    position: absolute;
+    inset-block-start: -1px;
+    inset-inline-end: 28px;
+    inline-size: 46px;
+    block-size: 2px;
+    background: var(--accent);
+    transform: scaleX(.35);
+    transform-origin: right;
+    transition: transform var(--motion-slow) var(--ease);
+  }
+
+  html[dir='rtl'] .skill-group::after { transform-origin: left; }
+
+  .skill-group:hover {
+    transform: translateY(-5px);
+    border-color: color-mix(in srgb, var(--accent) 58%, var(--border));
+    box-shadow: 0 24px 50px rgb(0 0 0 / 14%), inset 0 1px color-mix(in srgb, var(--accent) 20%, transparent);
+  }
+
+  .skill-group:hover::after { transform: scaleX(1); }
+
+  .skill-group:first-child {
+    background:
+      radial-gradient(circle at 88% 12%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 34%),
+      linear-gradient(150deg, color-mix(in srgb, var(--accent) 8%, var(--surface)), var(--surface));
+  }
+
+  .skill-group__heading > span {
+    border-color: color-mix(in srgb, var(--accent) 30%, var(--border));
+    background: color-mix(in srgb, var(--accent) 7%, var(--surface-elevated));
+  }
+
+  .tag-list span {
+    border-color: color-mix(in srgb, var(--accent) 14%, var(--border));
+    background: color-mix(in srgb, var(--bg) 72%, transparent);
+  }
+
+  .architecture-map__core {
+    border-color: var(--gold-line);
+    background: radial-gradient(circle at 50% 35%, color-mix(in srgb, var(--accent) 14%, var(--surface)), var(--surface));
+    box-shadow: 0 20px 45px color-mix(in srgb, var(--accent) 11%, transparent);
+  }
+
+  .architecture-card { overflow: hidden; }
+  .architecture-card::after {
+    content: '';
+    position: absolute;
+    inset: auto -30px -50px auto;
+    inline-size: 100px;
+    aspect-ratio: 1;
+    border: 1px solid color-mix(in srgb, var(--accent) 15%, transparent);
+    border-radius: 50%;
+  }
+
+  // Native scroll timelines keep motion tied to the viewport without a scroll listener.
+  // Browsers without this feature retain the existing IntersectionObserver reveal.
+  @supports (animation-timeline: view()) {
+    .hero__content {
+      animation: revival-hero-copy-scroll linear both;
+      animation-timeline: view(block);
+      animation-range: exit 0% exit 78%;
+    }
+
+    .system-preview {
+      animation: revival-hero-system-scroll linear both;
+      animation-timeline: view(block);
+      animation-range: exit 0% exit 92%;
+    }
+
+    .hero__halo {
+      animation: revival-halo-scroll linear both;
+      animation-timeline: view(block);
+      animation-range: exit 0% exit 100%;
+    }
+
+    [mkReveal].is-visible,
+    [mkReveal].is-visible > mk-section-heading,
+    [mkReveal].is-visible .about-copy,
+    [mkReveal].is-visible .principle,
+    [mkReveal].is-visible .skill-group,
+    [mkReveal].is-visible .project-empty,
+    [mkReveal].is-visible .architecture-card,
+    [mkReveal].is-visible .contact-aside,
+    [mkReveal].is-visible .contact-form,
+    [mkReveal].is-visible .content-placeholder {
+      animation-delay: 0s;
+    }
+
+    [mkReveal].is-visible > mk-section-heading {
+      animation: revival-heading-scroll linear both;
+      animation-timeline: view(block);
+      animation-range: entry 4% cover 28%;
+    }
+
+    [mkReveal].is-visible .about-copy,
+    [mkReveal].is-visible .principle,
+    [mkReveal].is-visible .skill-group,
+    [mkReveal].is-visible .project-empty,
+    [mkReveal].is-visible .architecture-card,
+    [mkReveal].is-visible .contact-aside,
+    [mkReveal].is-visible .contact-form,
+    [mkReveal].is-visible .content-placeholder {
+      animation: revival-object-scroll linear both;
+      animation-timeline: view(block);
+      animation-range: entry 2% cover 26%;
+    }
+
+    [mkReveal].is-visible .principle:nth-child(2),
+    [mkReveal].is-visible .skill-group:nth-child(2),
+    [mkReveal].is-visible .architecture-card:nth-of-type(2) {
+      animation-range: entry 8% cover 30%;
+    }
+
+    [mkReveal].is-visible .principle:nth-child(3),
+    [mkReveal].is-visible .skill-group:nth-child(3),
+    [mkReveal].is-visible .architecture-card:nth-of-type(3) {
+      animation-range: entry 12% cover 34%;
+    }
+
+    [mkReveal].is-visible .skill-group:nth-child(4),
+    [mkReveal].is-visible .architecture-card:nth-of-type(4) {
+      animation-range: entry 16% cover 38%;
+    }
+
+    [mkReveal].is-visible .skill-group:nth-child(5) {
+      animation-range: entry 20% cover 42%;
+    }
+
+    .section-heading::after {
+      animation: revival-rule-scroll linear both;
+      animation-timeline: view(block);
+      animation-range: entry 8% cover 32%;
+      transform-origin: right;
+    }
+
+    html[dir='rtl'] .section-heading::after { transform-origin: left; }
+
+    .case-file:not(.case-file--back) {
+      animation: revival-case-front-scroll linear both;
+      animation-timeline: view(block);
+      animation-range: entry 0% cover 44%;
+    }
+
+    .case-file--back {
+      animation: revival-case-back-scroll linear both;
+      animation-timeline: view(block);
+      animation-range: entry 0% cover 44%;
+    }
+
+    @keyframes revival-hero-copy-scroll {
+      from { opacity: 1; translate: 0 0; }
+      to { opacity: .28; translate: 0 -46px; }
+    }
+
+    @keyframes revival-hero-system-scroll {
+      from { opacity: 1; translate: 0 0; scale: 1; }
+      to { opacity: .42; translate: 0 64px; scale: .94; }
+    }
+
+    @keyframes revival-halo-scroll {
+      from { opacity: 1; rotate: 0deg; scale: 1; }
+      to { opacity: .2; rotate: 9deg; scale: 1.12; }
+    }
+
+    @keyframes revival-heading-scroll {
+      from { opacity: .18; translate: 0 34px; scale: .985; }
+      to { opacity: 1; translate: 0 0; scale: 1; }
+    }
+
+    @keyframes revival-object-scroll {
+      from { opacity: .12; translate: 0 38px; scale: .985; }
+      to { opacity: 1; translate: 0 0; scale: 1; }
+    }
+
+    @keyframes revival-rule-scroll {
+      from { opacity: 0; transform: scaleX(0); }
+      to { opacity: 1; transform: scaleX(1); }
+    }
+
+    @keyframes revival-case-front-scroll {
+      from { opacity: .22; translate: -24px 46px; rotate: -5deg; }
+      to { opacity: 1; translate: 0 0; rotate: 0deg; }
+    }
+
+    @keyframes revival-case-back-scroll {
+      from { opacity: .12; translate: 28px 58px; rotate: 7deg; }
+      to { opacity: 1; translate: 0 0; rotate: 0deg; }
+    }
+  }
+
+  @media (max-width: 850px) {
+    .skill-group { min-height: 220px; }
+    .section-heading::after { inline-size: 48px; }
+  }
+
+  @media (max-width: 640px) {
+    .hero__grid { opacity: .09; }
+    .system-preview { box-shadow: 0 24px 58px rgb(0 0 0 / 18%), inset 0 1px color-mix(in srgb, var(--accent) 22%, transparent); }
+    .skill-group { min-height: auto; }
+    .section-heading::after { display: none; }
+
+    @supports (animation-timeline: view()) {
+      .hero__content {
+        animation-range: exit 0% exit 55%;
+      }
+
+      .system-preview {
+        animation-range: entry 0% cover 32%;
+      }
+
+      [mkReveal].is-visible .about-copy,
+      [mkReveal].is-visible .principle,
+      [mkReveal].is-visible .skill-group,
+      [mkReveal].is-visible .project-empty,
+      [mkReveal].is-visible .architecture-card,
+      [mkReveal].is-visible .contact-aside,
+      [mkReveal].is-visible .contact-form,
+      [mkReveal].is-visible .content-placeholder {
+        animation-range: entry 0% cover 20%;
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero h1 > span:last-child { background-position: 0 0; }
+    .skill-group:hover { transform: none; }
+
+    .hero__content,
+    .system-preview,
+    .hero__halo,
+    [mkReveal].is-visible > mk-section-heading,
+    [mkReveal].is-visible .about-copy,
+    [mkReveal].is-visible .principle,
+    [mkReveal].is-visible .skill-group,
+    [mkReveal].is-visible .project-empty,
+    [mkReveal].is-visible .architecture-card,
+    [mkReveal].is-visible .contact-aside,
+    [mkReveal].is-visible .contact-form,
+    [mkReveal].is-visible .content-placeholder,
+    .section-heading::after,
+    .case-file {
+      opacity: 1;
+      translate: none;
+      rotate: none;
+      scale: none;
+      animation: none;
+    }
+  }
+}

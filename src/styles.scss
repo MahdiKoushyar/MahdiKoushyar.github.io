@@ -1,4 +1,5 @@
-@use './styles/editorial';
+@use './styles/refinement';
+@use './styles/revival';
 
 :root {
   color-scheme: dark;
@@ -383,7 +384,8 @@ html[lang='fa'] .availability { font-size: 12px; }
   .case-file { width: 178px; }
   .contact-form { padding: 18px; }
 }
-@include editorial.layout;
+@include refinement.layout;
+@include revival.layout;
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
