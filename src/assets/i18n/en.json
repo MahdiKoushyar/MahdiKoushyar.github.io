@@ -1,4 +1,23 @@
 {
+  "career": {
+    "senior": "Senior Frontend Developer",
+    "frontend": "Frontend Developer",
+    "seniorUi": "Senior UI Developer",
+    "dateNote": "Dates are Gregorian. Start windows reflect source precision, not employment durations. End dates are omitted where unconfirmed.",
+    "shaygan": { "date": "Started May–Jun 2022", "description": "Tehran, Iran · On-site", "one": "Developed Sharjbook with Angular and TypeScript in Nx, presenting features, pricing and guides in a responsive Persian RTL interface.", "two": "Implemented AnalogJS prerendering, metadata and structured data for SEO, with REST APIs and RxJS data flows." },
+    "tkc": { "date": "Started Jun–Jul 2019 · Ongoing", "description": "Tehran, Iran", "one": "Develop web and mobile interfaces with Angular and React, optimize loading performance and improve websites for search engines." },
+    "kingrose": { "date": "Started 2019", "description": "Istanbul, Turkey · Full-time · Remote", "one": "Developed an ERP frontend with React and Redux, reusable Atomic Design components, Formik forms and React Table data tables." },
+    "alotennis": { "date": "Started Dec 2017", "description": "Tehran, Iran · Part-time" },
+    "andishe": { "date": "Started Jun–Jul 2016", "description": "Tehran, Iran", "one": "Developed Angular interfaces for electricity Billing and Green Electricity payment portals with NgRx, PrimeNG, Angular Material, REST and WebSocket integration." },
+    "pezhvak": { "date": "Started 2016", "description": "Tehran, Iran · Full-time" },
+    "raya": { "date": "Started May 2015", "description": "Tehran, Iran · Part-time" }
+  },
+  "work": {
+    "sharjbook": { "name": "Sharjbook — Building Management Product Website", "description": "A publicly accessible work sample presenting product features, pricing and guides in a responsive Persian RTL interface.", "architecture": "Angular, TypeScript and SCSS in an Nx workspace, with AnalogJS and Vite prerendering. Angular HttpClient and RxJS handle REST API integration and data flows.", "challenge": "Present product information in a responsive RTL interface and make pages accessible to search engines through prerendering, metadata, canonical URLs and structured data.", "result": "The website can be viewed at sharjbook.com as a public example of this frontend work." },
+    "kingrose": { "name": "Kingrose+ ERP — Turkey", "description": "Remote ERP frontend development using React and Redux. Project started within Feb–Mar 2019.", "architecture": "Reusable components organized through Atomic Design, with Redux state management, Formik forms, React Table and Bootstrap styling.", "challenge": "Build ERP forms and data tables with reusable frontend components.", "result": "Implemented ERP interfaces, forms and data tables for Kingrose+. No public project link is provided." },
+    "billing": { "name": "Electricity Distribution Billing System", "description": "Andishe Computer: interfaces for electricity connection sales, inventory, meter installation and service-desk workflows. Started within Jun–Jul 2016.", "architecture": "Angular and TypeScript with PrimeNG, NgRx state management, Angular Universal, REST APIs and WebSocket communication.", "challenge": "Support electricity-utility operational workflows and connect interfaces to backend services.", "result": "Developed interfaces for the Billing system. This is an internal project without a public demonstration link." },
+    "green": { "name": "Green Electricity — Online Bill Payment Portal", "description": "Andishe Computer: an online electricity bill payment portal supporting the move away from paper bills. Started within Jun–Jul 2016.", "architecture": "Angular, TypeScript and Angular Material, with RxJS and NgRx data flows, Angular Universal and REST API integration.", "challenge": "Implement bill-payment interfaces and manage application data flows.", "result": "Developed the portal's frontend and API integration. No public project link is provided." }
+  },
   "nav": {
     "primary": "Primary navigation",
     "menu": "Explore",
@@ -18,7 +37,7 @@
   "hero": {
     "exploreSkills": "Explore my capabilities",
     "focusLabel": "Areas of focus",
-    "availability": "Thoughtful engineering. Lasting impact.",
+    "availability": "Open to Work · Remote",
     "firstName": "Mahdi",
     "lastName": "Koushyar",
     "visualLabel": "Anatomy of a digital product",
@@ -26,11 +45,13 @@
     "stackLabel": "My core toolkit",
     "layers": { "interface": "Interface", "state": "State", "domain": "Domain" },
     "layerDetails": { "interface": "Thoughtful interactions. Accessible by design.", "state": "Predictable data flow. Responsive experiences.", "domain": "Clear boundaries. Room to grow." },
-    "kicker": "Software Engineer · Frontend Architect",
-    "roles": "Complex systems. Clear experiences.",
-    "statement": "I’m Mahdi Koushyar. I work on web interfaces, Angular architecture, and clear user experiences for complex digital products.",
+    "kicker": "Senior Frontend Developer",
+    "roles": "Angular & React · TypeScript · Nx & Micro Frontends",
+    "statement": "I build enterprise, ERP and electricity-utility interfaces, with a focus on frontend architecture, state management, PWA and web performance. Open to remote full-time and part-time opportunities with international teams.",
     "viewProjects": "View selected work",
     "resume": "Download resume",
+    "resumeEnglish": "English resume (PDF)",
+    "resumePersian": "Persian resume (PDF)",
     "contact": "Start a conversation",
     "scroll": "A little more about me"
   },
@@ -45,8 +66,8 @@
       "craft": { "title": "Care in the details", "text": "Accessible interfaces, considered interactions, and fast feedback." },
       "scale": { "title": "Built to evolve", "text": "Foundations that grow with the product and the team." }
     },
-    "paragraphOne": "My work sits between engineering systems and product experience: shaping Angular foundations, reusable interfaces, delivery patterns, and performance budgets that teams can trust.",
-    "paragraphTwo": "I favor explicit boundaries, measurable outcomes, and maintainable solutions over fashionable complexity. Every component should earn its place in the system.",
+    "paragraphOne": "I am a Senior Frontend Developer specializing in Angular, React and TypeScript. My experience includes the Sharjbook product website, remote development of Kingrose+ ERP in Turkey, and electricity Billing and Green Electricity payment portals.",
+    "paragraphTwo": "I focus on maintainable frontend architecture, reusable components and responsive interfaces. My toolkit includes Nx, Micro Frontends, Module Federation, RxJS, Signals, NgRx and Redux, alongside REST APIs, WebSocket, PWA, SSR, SEO and motion with reduced-motion support.",
     "quote": "Clarity scales better than cleverness.",
     "metrics": {
       "years": "Years of experience",
@@ -69,7 +90,11 @@
       "02": "Clear foundations for projects that grow with the product and the team.",
       "03": "Connecting the interface to data and backend services.",
       "04": "Attention to loading speed, bundle size and the experience across devices.",
-      "05": "Testing, continuous delivery and thoughtful use of AI in the development process."
+      "05": "Testing, continuous delivery and thoughtful use of AI in the development process.",
+      "06": "Predictable application state and data flows in Angular and React.",
+      "07": "Installable web applications, service workers, manifests and caching.",
+      "08": "Real-time communication between interfaces and backend services.",
+      "09": "CSS and Angular motion, scroll-driven interaction and reduced-motion support."
     },
     "eyebrow": "Capability map",
     "title": "From an idea to a usable experience.",
@@ -79,11 +104,15 @@
     "backend": "API collaboration",
     "performance": "Performance & delivery",
     "tools": "Tooling & quality",
+    "state": "State Management",
+    "pwa": "PWA",
+    "realtime": "Real-time Communication",
+    "motion": "Motion & Interaction",
     "aiApplication": "Applying AI"
   },
   "projects": {
     "github": "Explore my profile and repositories on GitHub",
-    "eyebrow": "Selected work",
+    "eyebrow": "Projects",
     "title": "The thinking behind the build.",
     "lead": "A closer look at challenges, decisions, and the systems that connect them.",
     "filterLabel": "Filter projects by category",
@@ -97,6 +126,7 @@
       "personal": "Personal"
     },
     "caseStudy": "Read case study",
+    "publicSample": "Public work sample · sharjbook.com",
     "emptyEyebrow": "Case studies · Coming soon",
     "emptyTitle": "Every interface has a story.",
     "emptyText": "Selected project stories are being prepared—from the first constraint to the final engineering decision."
@@ -123,7 +153,7 @@
     },
     "eyebrow": "Contact",
     "title": "Let’s build something meaningful.",
-    "lead": "A new product, a difficult architecture decision, or an idea worth exploring.",
+    "lead": "Open to remote Senior Frontend Developer opportunities with international teams, including full-time and part-time roles.",
     "statement": "Let’s turn technical complexity into a product experience that feels simple.",
     "response": "To get started, include the topic, your goal and an approximate timeline in your email.",
     "fields": { "name": "Name", "email": "Email", "subject": "Subject", "message": "Message" },
@@ -143,7 +173,7 @@
     "action": "Return home"
   },
   "caseStudy": {
-    "back": "Back to selected work",
+    "back": "Back to projects",
     "emptyEyebrow": "Case study unavailable",
     "emptyTitle": "This project has not been published.",
     "emptyText": "The route and content architecture are ready, but no invented case study will be shown.",

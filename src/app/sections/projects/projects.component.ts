@@ -27,12 +27,13 @@ import { SectionHeadingComponent } from '../../shared/section-heading/section-he
             @for (project of filteredProjects(); track project.slug; let index = $index) {
               <article class="project-card">
                 <div class="project-card__visual">
-                  @if (project.imageUrl) { <img [src]="project.imageUrl" [alt]="project.name" width="720" height="460" loading="lazy"> }
+                  @if (project.imageUrl) { <img [src]="project.imageUrl" [alt]="project.name | transloco" width="720" height="460" loading="lazy"> }
                   @else { <span class="project-card__placeholder">0{{ index + 1 }}</span> }
                 </div>
-                <div class="project-card__body"><p>{{ project.category }}</p><h3>{{ project.name }}</h3><p>{{ project.descriptionKey | transloco }}</p>
+                <div class="project-card__body"><p>{{ 'projects.categories.' + project.category | transloco }}</p><h3>{{ project.name | transloco }}</h3><p>{{ project.descriptionKey | transloco }}</p>
                   <div class="tag-list">@for (technology of project.technologies; track technology) { <span>{{ technology }}</span> }</div>
                   <a [routerLink]="['/projects', project.slug]">{{ 'projects.caseStudy' | transloco }} <span aria-hidden="true">↗</span></a>
+                  @if (project.liveUrl) { <a [href]="project.liveUrl" target="_blank" rel="noopener noreferrer">{{ 'projects.publicSample' | transloco }} <span aria-hidden="true">↗</span></a> }
                 </div>
               </article>
             }

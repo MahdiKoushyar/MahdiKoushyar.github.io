@@ -179,6 +179,7 @@ html[lang='fa'] .availability { font-size: 12px; }
 .content-placeholder p { margin: 0; color: var(--text-soft); font-size: 14px; }
 .timeline-item { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 48px; padding-block: 28px; border-bottom: 1px solid var(--border); }
 .timeline-item__date { color: var(--text-faint); font-size: 13px; }
+.career-date-note { margin-block-start: 28px; color: var(--text-soft); font-size: 14px; }
 .timeline-item__content h3 { margin: 0; font-size: 24px; }
 .timeline-item__content p, .timeline-item__content li { color: var(--text-soft); }
 
@@ -206,6 +207,7 @@ html[lang='fa'] .availability { font-size: 12px; }
 .project-card h3 { margin: 8px 0 12px; font-size: 26px; }
 .project-card__body p { color: var(--text-soft); }
 .project-card__body > a { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; margin-top: 20px; color: var(--accent); }
+.project-card__body > a + a { margin-inline-start: 20px; }
 .project-empty { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; padding: 44px 64px 44px 32px; align-items: center; border: 1px solid var(--border); border-radius: 24px; background: var(--surface); }
 .project-empty h3 { margin: 0 0 18px; font-size: 32px; line-height: 1.35; letter-spacing: -.03em; font-weight: 500; }
 .project-empty p { color: var(--text-soft); font-size: 15px; }

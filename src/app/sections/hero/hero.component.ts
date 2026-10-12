@@ -23,7 +23,8 @@ import { TiltDirective } from '../../core/directives/tilt.directive';
           <div class="hero__actions">
             <a routerLink="/" fragment="contact" class="button button--primary">{{ 'hero.contact' | transloco }} <span class="direction-arrow" aria-hidden="true">↗</span></a>
             @if (profile.resumeUrl) {
-              <a [href]="profile.resumeUrl" class="button button--secondary" download>{{ 'hero.resume' | transloco }}</a>
+              <a [href]="profile.resumeUrl" class="button button--secondary" download>{{ 'hero.resumeEnglish' | transloco }}</a>
+              <a [href]="profile.resumeFaUrl" class="button button--secondary" download>{{ 'hero.resumePersian' | transloco }}</a>
             }
             <a routerLink="/" fragment="skills" class="button button--secondary">{{ 'hero.exploreSkills' | transloco }}</a>
           </div>

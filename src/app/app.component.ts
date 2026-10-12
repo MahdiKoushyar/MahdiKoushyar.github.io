@@ -29,11 +29,9 @@ export class AppComponent {
   private readonly router = inject(Router);
 
   constructor() {
-    effect(() => this.seo.update(this.language.language()));
+    effect(() => this.seo.update(this.language.language(), this.router.url));
     this.router.events.pipe(filter((event) => event instanceof NavigationEnd), takeUntilDestroyed()).subscribe(() => {
-      if (this.router.url.split(/[?#]/)[0] === '/') {
-        queueMicrotask(() => this.seo.update(this.language.language()));
-      }
+      queueMicrotask(() => this.seo.update(this.language.language(), this.router.url));
     });
     void this.theme.theme();
   }
