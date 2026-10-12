@@ -1,5 +1,6 @@
 @use './styles/refinement';
 @use './styles/revival';
+@use './styles/career';
 
 :root {
   color-scheme: dark;
@@ -234,7 +235,8 @@ html[lang='fa'] .availability { font-size: 12px; }
 .architecture-card p { margin: 0; color: var(--text-soft); font-size: 14px; }
 .contact-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 90px; padding-inline-start: 80px; }
 .contact-aside__statement { margin: 0; font-size: 24px; line-height: 1.7; font-weight: 400; letter-spacing: -.02em; }
-.contact-email { display: inline-block; margin-top: 20px; color: var(--accent); }
+.contact-details { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; margin-block-start: 20px; }
+.contact-email { display: flex; align-items: center; inline-size: fit-content; max-inline-size: 100%; min-block-size: 44px; overflow-wrap: anywhere; color: var(--accent); }
 .contact-note { display: flex; gap: 10px; margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border); }
 .contact-note > span { flex: 0 0 6px; height: 6px; margin-top: 8px; border-radius: 50%; background: var(--accent); }
 .contact-note p { margin: 0; color: var(--text-soft); font-size: 13px; }
@@ -388,6 +390,7 @@ html[lang='fa'] .availability { font-size: 12px; }
 }
 @include refinement.layout;
 @include revival.layout;
+@include career.layout;
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

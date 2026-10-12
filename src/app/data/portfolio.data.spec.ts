@@ -25,6 +25,7 @@ describe('portfolio content integrity', () => {
 
   it('resolves all career, project and skill content in both languages', () => {
     const keys = [
+      ...['overview', 'companies', 'focus', 'profile', 'listLabel', 'current', 'remote', 'contributions', 'technologies'].map((key) => `experience.${key}`),
       ...experiences.flatMap((item) => [item.role, item.date, item.descriptionKey, ...item.achievements]),
       ...projects.flatMap((item) => [item.name, item.role, item.descriptionKey, item.architecture, item.challengeKey, item.resultKey]),
       ...skillGroups.flatMap((item) => [item.titleKey, `skills.descriptions.${item.index}`]),
@@ -44,6 +45,14 @@ describe('portfolio content integrity', () => {
     expect(profile.phoneUrl).toBe('tel:+989124993798');
     expect(en.hero.availability).toContain('Open to Work');
     expect(fa.hero.availability).toContain('Open to Work');
+  });
+
+  it('positions the listed work as part of the user-confirmed 100-plus projects', () => {
+    expect(en.hero.statement).toContain('more than 100 projects');
+    expect(fa.hero.statement).toContain('بیش از ۱۰۰ پروژه');
+    expect(en.projects.lead).toContain('not a complete project list');
+    expect(fa.projects.lead).toContain('نه فهرست کامل');
+    expect(projects).toHaveLength(4);
   });
 
   it('keeps unique skills and project filters', () => {

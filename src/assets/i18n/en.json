@@ -47,7 +47,7 @@
     "layerDetails": { "interface": "Thoughtful interactions. Accessible by design.", "state": "Predictable data flow. Responsive experiences.", "domain": "Clear boundaries. Room to grow." },
     "kicker": "Senior Frontend Developer",
     "roles": "Angular & React · TypeScript · Nx & Micro Frontends",
-    "statement": "I build enterprise, ERP and electricity-utility interfaces, with a focus on frontend architecture, state management, PWA and web performance. Open to remote full-time and part-time opportunities with international teams.",
+    "statement": "Experience across more than 100 projects, from business websites to enterprise, ERP and electricity-utility interfaces. I focus on frontend architecture, state management, PWA and web performance. Open to remote full-time and part-time opportunities with international teams.",
     "viewProjects": "View selected work",
     "resume": "Download resume",
     "resumeEnglish": "English resume (PDF)",
@@ -66,7 +66,7 @@
       "craft": { "title": "Care in the details", "text": "Accessible interfaces, considered interactions, and fast feedback." },
       "scale": { "title": "Built to evolve", "text": "Foundations that grow with the product and the team." }
     },
-    "paragraphOne": "I am a Senior Frontend Developer specializing in Angular, React and TypeScript. My experience includes the Sharjbook product website, remote development of Kingrose+ ERP in Turkey, and electricity Billing and Green Electricity payment portals.",
+    "paragraphOne": "I am a Senior Frontend Developer specializing in Angular, React and TypeScript. My work spans a broad range of business and product projects, from company websites to enterprise and utility systems. Sharjbook, remote development of Kingrose+ ERP in Turkey, and electricity Billing and Green Electricity payment portals are examples of that experience.",
     "paragraphTwo": "I focus on maintainable frontend architecture, reusable components and responsive interfaces. My toolkit includes Nx, Micro Frontends, Module Federation, RxJS, Signals, NgRx and Redux, alongside REST APIs, WebSocket, PWA, SSR, SEO and motion with reduced-motion support.",
     "quote": "Clarity scales better than cleverness.",
     "metrics": {
@@ -77,10 +77,19 @@
     }
   },
   "experience": {
+    "overview": "Professional footprint",
+    "companies": "companies along the way",
+    "focus": "Frontend engineering across product websites, ERP and utility systems.",
+    "profile": "LinkedIn profile",
+    "listLabel": "Professional experience by company",
+    "current": "Ongoing collaboration",
+    "remote": "Remote · Turkey",
+    "contributions": "Scope & contributions",
+    "technologies": "Technology stack",
     "linkedin": "Explore my professional profile on LinkedIn",
     "eyebrow": "Career timeline",
     "title": "The journey behind the work.",
-    "lead": "Roles, responsibilities, and the decisions that shaped my approach.",
+    "lead": "The professional collaborations behind a broad range of projects, and the roles, responsibilities and experience that shaped my engineering approach.",
     "emptyTitle": "Career details are being prepared.",
     "emptyText": "A closer look at my professional journey will be available here."
   },
@@ -114,7 +123,7 @@
     "github": "Explore my profile and repositories on GitHub",
     "eyebrow": "Projects",
     "title": "The thinking behind the build.",
-    "lead": "A closer look at challenges, decisions, and the systems that connect them.",
+    "lead": "More than 100 projects throughout my career. The examples here represent part of that experience, not a complete project list. These entries focus on the work, technologies and technical decisions behind a few projects.",
     "filterLabel": "Filter projects by category",
     "categories": {
       "all": "All",
@@ -129,7 +138,7 @@
     "publicSample": "Public work sample · sharjbook.com",
     "emptyEyebrow": "Case studies · Coming soon",
     "emptyTitle": "Every interface has a story.",
-    "emptyText": "Selected project stories are being prepared—from the first constraint to the final engineering decision."
+    "emptyText": "More project stories are being prepared. The examples on this site represent only part of my professional experience."
   },
   "highlights": {
     "eyebrow": "Architecture highlights",

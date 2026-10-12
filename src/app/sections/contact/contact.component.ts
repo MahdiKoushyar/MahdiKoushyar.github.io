@@ -17,8 +17,10 @@ import { SocialLinksComponent } from '../../shared/social-links/social-links.com
         <div class="contact-grid">
           <div class="contact-aside">
             <p class="contact-aside__statement">{{ 'contact.statement' | transloco }}</p>
-            <a class="contact-email" dir="ltr" [href]="'mailto:' + profile.email">{{ profile.email }}</a>
-            <a class="contact-email" dir="ltr" [href]="profile.phoneUrl">{{ profile.phone }}</a>
+            <div class="contact-details">
+              <a class="contact-email" dir="ltr" [href]="'mailto:' + profile.email">{{ profile.email }}</a>
+              <a class="contact-email" dir="ltr" [href]="profile.phoneUrl">{{ profile.phone }}</a>
+            </div>
             @if (profile.location) { <p>{{ profile.location }}</p> }
             <mk-social-links />
             <div class="contact-note"><span aria-hidden="true"></span><p>{{ 'contact.response' | transloco }}</p></div>
