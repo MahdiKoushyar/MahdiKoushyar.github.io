@@ -5,11 +5,12 @@ import { RevealDirective } from '../../core/directives/reveal.directive';
 import { profile } from '../../data/portfolio.data';
 import { SectionHeadingComponent } from '../../shared/section-heading/section-heading.component';
 import { SocialLinksComponent } from '../../shared/social-links/social-links.component';
+import { ResumeDownloadComponent } from '../../shared/resume-download/resume-download.component';
 
 @Component({
   selector: 'mk-contact',
   standalone: true,
-  imports: [ReactiveFormsModule, TranslocoPipe, RevealDirective, SectionHeadingComponent, SocialLinksComponent],
+  imports: [ReactiveFormsModule, TranslocoPipe, RevealDirective, SectionHeadingComponent, SocialLinksComponent, ResumeDownloadComponent],
   template: `
     <section id="contact" class="section section--contact">
       <div class="shell" mkReveal>
@@ -36,8 +37,7 @@ import { SocialLinksComponent } from '../../shared/social-links/social-links.com
             <section class="contact-resumes" aria-labelledby="contact-resumes-title">
               <h3 id="contact-resumes-title">{{ 'hero.resume' | transloco }}</h3>
               <div class="contact-resumes__actions">
-                <a class="button button--secondary" [href]="profile.resumeFaUrl" download="Mahdi-Koushyar-Resume-FA.pdf">{{ 'hero.resumePersian' | transloco }} <span aria-hidden="true">↓</span></a>
-                <a class="button button--secondary" [href]="profile.resumeUrl" download="Mahdi-Koushyar-Resume-EN.pdf">{{ 'hero.resumeEnglish' | transloco }} <span aria-hidden="true">↓</span></a>
+                <mk-resume-download />
               </div>
             </section>
             <details class="contact-preview">

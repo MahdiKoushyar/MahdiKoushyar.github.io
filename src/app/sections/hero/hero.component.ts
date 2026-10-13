@@ -1,14 +1,14 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslocoPipe } from '@jsverse/transloco';
-import { profile } from '../../data/portfolio.data';
+import { ResumeDownloadComponent } from '../../shared/resume-download/resume-download.component';
 import { SocialLinksComponent } from '../../shared/social-links/social-links.component';
 import { TiltDirective } from '../../core/directives/tilt.directive';
 
 @Component({
   selector: 'mk-hero',
   standalone: true,
-  imports: [RouterLink, TranslocoPipe, SocialLinksComponent, TiltDirective],
+  imports: [RouterLink, TranslocoPipe, SocialLinksComponent, TiltDirective, ResumeDownloadComponent],
   template: `
     <section id="home" class="hero" aria-labelledby="hero-title">
       <div class="hero__grid" aria-hidden="true"></div>
@@ -22,10 +22,7 @@ import { TiltDirective } from '../../core/directives/tilt.directive';
           <p class="hero__statement">{{ 'hero.statement' | transloco }}</p>
           <div class="hero__actions">
             <a routerLink="/" fragment="contact" class="button button--primary">{{ 'hero.contact' | transloco }} <span class="direction-arrow" aria-hidden="true">↗</span></a>
-            @if (profile.resumeUrl) {
-              <a [href]="profile.resumeUrl" class="button button--secondary" download="Mahdi-Koushyar-Resume-EN.pdf">{{ 'hero.resumeEnglish' | transloco }}</a>
-              <a [href]="profile.resumeFaUrl" class="button button--secondary" download="Mahdi-Koushyar-Resume-FA.pdf">{{ 'hero.resumePersian' | transloco }}</a>
-            }
+            <mk-resume-download />
             <a routerLink="/" fragment="skills" class="button button--secondary">{{ 'hero.exploreSkills' | transloco }}</a>
           </div>
           <mk-social-links />
@@ -60,7 +57,6 @@ import { TiltDirective } from '../../core/directives/tilt.directive';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeroComponent {
-  readonly profile = profile;
   readonly layers = ['interface', 'state', 'domain'] as const;
   readonly activeLayer = signal<(typeof this.layers)[number]>('interface');
 }

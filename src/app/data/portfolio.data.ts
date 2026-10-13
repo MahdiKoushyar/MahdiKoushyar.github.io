@@ -50,6 +50,7 @@ export const profile = {
   location: 'Tehran, Iran',
   resumeUrl: '/resumes/Mahdi-Koushyar-Resume-EN.pdf',
   resumeFaUrl: '/resumes/Mahdi-Koushyar-Resume-FA.pdf',
+  resumeVersion: '2026-10-13-farsi',
   canonicalUrl: 'https://mahdikoushyar.github.io/',
   socialLinks: [
     { id: 'github', url: 'https://github.com/MahdiKoushyar', label: 'GitHub' },

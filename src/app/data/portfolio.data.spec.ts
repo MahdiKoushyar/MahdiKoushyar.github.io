@@ -4,7 +4,7 @@ import fa from '../../assets/i18n/fa.json';
 import { experiences, profile, projectCategories, projects, skillGroups } from './portfolio.data';
 
 describe('portfolio content integrity', () => {
-  it('publishes the supplied profiles and business-card email', () => {
+  it('publishes the supplied profiles and email', () => {
     expect(profile.socialLinks.filter((link) => link.url)).toEqual([
       { id: 'github', url: 'https://github.com/MahdiKoushyar', label: 'GitHub' },
       { id: 'linkedin', url: 'https://www.linkedin.com/in/mahdi-koushyar-b55984116/', label: 'LinkedIn' },
