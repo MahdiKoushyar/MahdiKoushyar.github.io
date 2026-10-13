@@ -240,6 +240,10 @@ html[lang='fa'] .availability { font-size: 12px; }
 .contact-note { display: flex; gap: 10px; margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border); }
 .contact-note > span { flex: 0 0 6px; height: 6px; margin-top: 8px; border-radius: 50%; background: var(--accent); }
 .contact-note p { margin: 0; color: var(--text-soft); font-size: 13px; }
+.contact-resumes { min-inline-size: 0; padding: 24px; border: 1px solid var(--border-strong); border-radius: 16px; background: var(--surface); }
+.contact-resumes h3 { margin: 0 0 16px; font-size: 17px; font-weight: 500; }
+.contact-resumes__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.contact-resumes__actions .button { flex: 1 1 180px; min-inline-size: 0; }
 .contact-form { min-width: 0; padding: 30px; border: 1px solid var(--border); border-radius: 20px; background: var(--surface); }
 .field-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .field { margin-bottom: 20px; }

@@ -33,6 +33,13 @@ import { SocialLinksComponent } from '../../shared/social-links/social-links.com
             <a class="contact-option" href="https://www.linkedin.com/in/mahdi-koushyar-b55984116/" target="_blank" rel="noopener noreferrer">
               <span class="contact-option__icon" aria-hidden="true">in</span><span><strong>LinkedIn</strong><small>{{ 'contact.linkedinText' | transloco }}</small></span><span class="direction-arrow" aria-hidden="true">↗</span>
             </a>
+            <section class="contact-resumes" aria-labelledby="contact-resumes-title">
+              <h3 id="contact-resumes-title">{{ 'hero.resume' | transloco }}</h3>
+              <div class="contact-resumes__actions">
+                <a class="button button--secondary" [href]="profile.resumeFaUrl" download="Mahdi-Koushyar-Resume-FA.pdf">{{ 'hero.resumePersian' | transloco }} <span aria-hidden="true">↓</span></a>
+                <a class="button button--secondary" [href]="profile.resumeUrl" download="Mahdi-Koushyar-Resume-EN.pdf">{{ 'hero.resumeEnglish' | transloco }} <span aria-hidden="true">↓</span></a>
+              </div>
+            </section>
             <details class="contact-preview">
               <summary>{{ 'contact.previewLabel' | transloco }} <span aria-hidden="true">+</span></summary>
               <p class="contact-preview__notice">{{ 'contact.privacy' | transloco }}</p>

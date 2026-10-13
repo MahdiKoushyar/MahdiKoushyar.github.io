@@ -42,6 +42,10 @@ describe('portfolio content integrity', () => {
   it('exposes both final PDF downloads and the supplied phone', () => {
     expect(profile.resumeUrl).toBe('/resumes/Mahdi-Koushyar-Resume-EN.pdf');
     expect(profile.resumeFaUrl).toBe('/resumes/Mahdi-Koushyar-Resume-FA.pdf');
+    expect(en.hero.resumeEnglish).toContain('Download');
+    expect(en.hero.resumePersian).toContain('Download');
+    expect(fa.hero.resumeEnglish).toContain('دانلود');
+    expect(fa.hero.resumePersian).toContain('دانلود');
     expect(profile.phoneUrl).toBe('tel:+989124993798');
     expect(en.hero.availability).toContain('Open to Work');
     expect(fa.hero.availability).toContain('Open to Work');
